@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root { --ink:#161616; --muted:#777; --line:#deded8; --paper:#f5f5f0; --card:#fbfbf7; --accent:#d7ff58; }
+* { box-sizing:border-box; }
+html,body { margin:0; min-height:100%; }
+body { background:var(--paper); color:var(--ink); font-family:Manrope,system-ui,sans-serif; }
+a { color:inherit; text-decoration:none; }
+.home-shell { min-height:100vh; display:flex; flex-direction:column; padding:clamp(28px,5vw,72px); }
+.home-content { flex:1; display:flex; flex-direction:column; justify-content:center; max-width:900px; margin:0 auto; width:100%; }
+.eyebrow { font:500 12px 'DM Mono',monospace; letter-spacing:.16em; }
+h1 { font-size:clamp(56px,10vw,128px); line-height:.91; letter-spacing:-.07em; margin:24px 0; font-weight:700; }
+h1 span { color:#73736d; }
+.home-subtitle { font-size:clamp(17px,2vw,23px); color:var(--muted); margin:0 0 46px; }
+.home-search { max-width:520px; }
+.home-search label { display:block; font:500 11px 'DM Mono',monospace; text-transform:uppercase; letter-spacing:.12em; margin-bottom:10px; }
+.home-search input { width:100%; border:1px solid var(--line); background:transparent; border-radius:10px; padding:16px 18px; font:inherit; outline:none; }
+.home-search input:focus { border-color:var(--ink); }
+.week-dock { display:flex; gap:10px; overflow-x:auto; padding-top:24px; border-top:1px solid var(--line); max-width:1100px; width:100%; margin:0 auto; }
+.week-link { flex:0 0 auto; min-width:190px; padding:15px 17px; border:1px solid var(--line); border-radius:9px; display:flex; flex-direction:column; gap:5px; background:var(--card); }
+.week-link small { color:var(--muted); font-size:12px; }.week-link.active { background:var(--ink); color:white; border-color:var(--ink); }.week-link.active small { color:#bdbdb8; }
+.week-shell { max-width:1100px; margin:auto; padding:32px 24px 60px; }.week-header { display:grid; grid-template-columns:160px 1fr 130px; gap:30px; align-items:end; padding-bottom:40px; border-bottom:1px solid var(--line); }.back-link { font:500 12px 'DM Mono',monospace; }.week-heading h1 { font-size:clamp(48px,7vw,86px); margin:12px 0 12px; }.week-heading p { margin:0; max-width:600px; color:var(--muted); line-height:1.6; }.week-stat { text-align:right; }.week-stat strong { display:block; font-size:40px; letter-spacing:-.05em; }.week-stat span { color:var(--muted); font:12px 'DM Mono',monospace; text-transform:uppercase; }
+.focus-card { margin:24px 0; padding:20px 22px; border-radius:10px; background:var(--accent); display:flex; justify-content:space-between; align-items:center; }.focus-card span { font:500 11px 'DM Mono',monospace; letter-spacing:.1em; }.focus-card strong { font-size:18px; }
+.runs { display:grid; gap:10px; }.run-card { display:grid; grid-template-columns:100px 1fr 150px; gap:24px; padding:25px; background:var(--card); border:1px solid var(--line); border-radius:10px; }.run-date strong,.run-date span { display:block; }.run-date strong { font-size:15px; }.run-date span { color:var(--muted); font:12px 'DM Mono',monospace; margin-top:5px; }.run-type { font:500 11px 'DM Mono',monospace; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); }.run-main h2 { margin:5px 0 7px; font-size:34px; letter-spacing:-.05em; }.run-main p { margin:0; line-height:1.5; color:#555; max-width:620px; }.effort { text-align:right; }.effort span { display:block; font:11px 'DM Mono',monospace; color:var(--muted); margin-bottom:5px; }.effort strong { font-size:14px; }.week-nav { display:flex; gap:8px; flex-wrap:wrap; margin-top:34px; }.week-nav a { border:1px solid var(--line); padding:10px 13px; border-radius:8px; font-size:13px; }.week-nav a span { font:11px 'DM Mono',monospace; margin-right:8px; color:var(--muted); }.week-nav a.selected { border-color:var(--ink); background:var(--ink); color:white; }
+@media (max-width:700px) { .week-header { grid-template-columns:1fr; gap:20px; }.week-stat { text-align:left; }.run-card { grid-template-columns:1fr; gap:15px; }.effort { text-align:left; }.focus-card { align-items:flex-start; flex-direction:column; gap:8px; } }
